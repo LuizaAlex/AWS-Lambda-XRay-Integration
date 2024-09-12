@@ -17,6 +17,7 @@ import com.syndicate.deployment.annotations.environment.EnvironmentVariables;
 import com.syndicate.deployment.annotations.lambda.LambdaHandler;
 import com.syndicate.deployment.annotations.lambda.LambdaUrlConfig;
 import com.syndicate.deployment.annotations.resources.DependsOn;
+import com.syndicate.deployment.model.DeploymentRuntime;
 import com.syndicate.deployment.model.ResourceType;
 import com.syndicate.deployment.model.RetentionSetting;
 import com.syndicate.deployment.model.TracingMode;
@@ -43,6 +44,7 @@ import java.time.temporal.ChronoUnit;
     lambdaName = "processor",
 	roleName = "processor-role",
 	isPublishVersion = false,
+	runtime = DeploymentRuntime.JAVA11,
 	tracingMode = TracingMode.Active,
 	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 )
